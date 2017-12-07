@@ -4,11 +4,11 @@ import './Weather.css';
 const API_KEY = 'e7c67fbaaea8bcc9ee8daeceff1d7400';
 
 function toCelsius(kelvin) {
-  return kelvin - 273.15;
+  return (kelvin - 273.15).toFixed(2);
 }
 
 function toFarenheit(kelvin) {
-  return kelvin * 9/5 - 459.67;
+  return (kelvin * 9/5 - 459.67).toFixed(2);
 }
 
 class Weather extends Component {
@@ -21,7 +21,7 @@ class Weather extends Component {
   }
 
   fetchData(lon, lat) {
-    const url = 
+    const url =
       `http://api.openweathermap.org/data/2.5/weather?lat=${lon}&lon=${lon}&appid=${API_KEY}`;
 
     fetch(url)

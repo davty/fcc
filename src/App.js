@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { 
+import {
   BrowserRouter as Router,
-  Route
+  Route, Link
 } from 'react-router-dom'
 import Weather from './Weather/Weather';
 import './App.css';
@@ -9,7 +9,10 @@ import './App.css';
 class App extends Component {
   render() {
     return (<Router className="App">
-      <Route path="/weather" component={Weather} />
+      <div>
+        <Link to="/weather">Weather</Link>
+        <Route path="/weather" component={Weather} />
+      </div>
     </Router>);
   }
 }
