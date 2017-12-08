@@ -22,7 +22,7 @@ class Weather extends Component {
 
   fetchData(lon, lat) {
     const url =
-      `http://api.openweathermap.org/data/2.5/weather?lat=${lon}&lon=${lon}&appid=${API_KEY}`;
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lon}&lon=${lon}&appid=${API_KEY}`;
 
     fetch(url)
       .then((response) => response.json())
@@ -46,7 +46,7 @@ class Weather extends Component {
     return (
       <div className="Weather container">
         <h1>{location}</h1>
-        <h2><img src={icon ? `http://openweathermap.org/img/w/${icon}.png` : ''} alt="Weather Icon" /></h2>
+        <h2><img src={icon ? `https://openweathermap.org/img/w/${icon}.png` : ''} alt="Weather Icon" /></h2>
         <h3 onClick={() => this.toggleCelsius()}>{celsius ? toCelsius(temperature) : toFarenheit(temperature)}</h3>
       </div>
     );
