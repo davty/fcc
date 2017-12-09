@@ -14,11 +14,12 @@
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+.widgets {
+  list-style: none;
+  display: flex;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.widgets li {
+  padding: 0.25em;
 }

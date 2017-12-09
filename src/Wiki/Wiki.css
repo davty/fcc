@@ -1,0 +1,20 @@
+
+
+.Wiki .Search input {
+  border: 0;
+  outline: 0;
+}
+
+.Wiki .Search .fa-search {
+  padding: 0.5em;
+  outline: 0;
+}
+
+.Wiki .Search {
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+.Wiki {
+  display: flex;
+}
